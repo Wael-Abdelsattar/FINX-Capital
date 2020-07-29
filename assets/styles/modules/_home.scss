@@ -1,0 +1,485 @@
+.topHeader {
+    background: #010101;
+    height: 7.5rem;
+    box-shadow: .1rem -.3rem 2.1rem -.1rem rgba(white, .16);
+    display: flex;
+    align-items: center;
+    position: relative;
+    figure {
+        @include mQ(31rem) {
+            margin: 0 auto;
+        }
+        a {
+            display: block;
+            margin-left: 3.2rem;
+            &:hover {
+                opacity: .7;
+            }
+            @include mQ(31rem) {
+                margin-left: 0;
+            }
+        }
+    }
+}
+
+.homePage {
+    background: url(../images/gbackground.jpg) center center no-repeat;
+    background-size: cover;
+    height: calc(100vh - 7.5rem);
+    width: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    .loginBox {
+        background: $lGray;
+        box-shadow: 0 2.4rem 3rem 0 rgba(black, .13);
+        border-radius: 3.6rem;
+        width: 47.7rem;
+        padding: 7.2rem 4rem;
+        @include mQ(31rem) {
+            width: 100%;
+            border-radius: 0;
+        }
+        @include mQ(25rem) {
+            padding: 4rem 2rem;
+        }
+        .logo {
+            margin-bottom: 5rem;
+            img {
+                margin: 0 auto;
+                width: 100%;
+            }
+        }
+        .logIn {
+            position: relative;
+            width: 30rem;
+            margin: 0 auto;
+            @include mQ(25rem) {
+                width: auto;
+            }
+            label {
+                font-weight: 700;
+                font-size: 1.4rem;
+                color: white;
+                letter-spacing: .021rem;
+                display: block;
+                margin-bottom: .3rem;
+            }
+            input {
+                background: white;
+                border-radius: .4rem;
+                padding: .9rem 1.6rem;
+                width: 100%;
+                display: block;
+                font-size: 1.6rem;
+                letter-spacing: .028rem;
+                position: relative;
+                border: none;
+            }
+            .userName,
+            .password {
+                position: relative;
+                &::before {
+                    position: absolute;
+                    font-family: 'finxIcon';
+                    left: 1.7rem;
+                    top: 50%;
+                    transform: translateY(-5%);
+                    font-size: 1.8rem;
+                    color: #55575A;
+                    z-index: 99;
+                }
+                input {
+                    padding-left: 4.7rem;
+                    position: relative;
+                }
+            }
+            .userName {
+                margin-bottom: 3.9rem;
+                @include mQ(31rem) {
+                    margin-bottom: 2.5rem;
+                }
+                &::before {
+                    content: "\e902";
+                }
+            }
+            .password {
+                margin-bottom: 3.2rem;
+                position: relative;
+                &::before {
+                    content: "\e901";
+                    font-size: 1.2rem;
+                    transform: translateY(19%);
+                }
+                .togglePassword {
+                    position: absolute;
+                    z-index: 9999;
+                    right: 1.7rem;
+                    top: 52%;
+                    i {
+                        color: black;
+                        cursor: pointer;
+                    }
+                }
+                .togglePasswordActive {
+                    i {
+                        color: rgba(black, .4);
+                    }
+                }
+            }
+            .submit {
+                background: white;
+                border: .1rem solid $red;
+                border-radius: .4rem;
+                width: 15rem;
+                display: block;
+                margin: 0 auto;
+                font-weight: 700;
+                font-size: 1.4rem;
+                color: $red;
+                letter-spacing: 0.021rem;
+                margin-bottom: 3rem;
+                &:hover {
+                    background-color: $red;
+                    color: white;
+                }
+            }
+            .checkboxContainer {
+                display: flex;
+                margin-bottom: 1.8rem;
+                .checkboxLabel {
+                    position: relative;
+                    margin: auto;
+                    cursor: pointer;
+                    clear: both;
+                    display: flex;
+                    align-items: center;
+                    p {
+                        margin-left: 2.5rem;
+                        margin-top: -.2rem;
+                        font-size: 1.4rem;
+                    }
+                    input {
+                        position: absolute;
+                        opacity: 0;
+                        width: auto;
+                        cursor: pointer;
+                        &:checked~.checkboxCustom {
+                            background-color: $red;
+                            border-radius: .2rem;
+                            transform: rotate(0deg) scale(1);
+                            opacity: 1;
+                            border: .2rem solid $red;
+                        }
+                        &:checked~.checkboxCustom::after {
+                            transform: rotate(45deg) scale(1);
+                            left: .4rem;
+                            top: .1rem;
+                            width: .5rem;
+                            height: .8rem;
+                            border: solid white;
+                            border-width: 0 .2rem .2rem 0;
+                            background-color: transparent;
+                            border-radius: 0;
+                        }
+                    }
+                    .checkboxCustom {
+                        position: absolute;
+                        top: 0;
+                        left: 0;
+                        height: 1.8rem;
+                        width: 1.8rem;
+                        background-color: transparent;
+                        border-radius: .2rem;
+                        transition: all 0.3s ease-out;
+                        border: .2rem solid $red;
+                        &::after {
+                            position: absolute;
+                            content: "";
+                            left: .4rem;
+                            top: .1rem;
+                            height: 0;
+                            width: 0;
+                            border-radius: .2rem;
+                            border: solid $red;
+                            border-width: 0 .3rem .3rem 0;
+                            transform: rotate(0deg) scale(0);
+                            opacity: 1;
+                            transition: all 0.3s ease-out;
+                        }
+                        &::before {
+                            position: absolute;
+                            content: "";
+                            left: 1rem;
+                            top: 1rem;
+                            width: 0;
+                            height: 0;
+                            border-radius: .2rem;
+                            border: .2rem solid #FFFFFF;
+                            transform: scale(0);
+                        }
+                    }
+                }
+            }
+            a {
+                display: block;
+                font-size: 1.4rem;
+                color: $blue;
+                letter-spacing: 0.021rem;
+                text-align: center;
+                text-decoration: underline;
+            }
+        }
+    }
+    .recoverBox {
+        background: $lGray;
+        box-shadow: 0 2.4rem 3rem 0 rgba(black, .13);
+        border-radius: 2.4rem;
+        width: 47.7rem;
+        padding: 4rem;
+        @include mQ(31rem) {
+            border-radius: 0;
+            width: 100%;
+            padding: 4rem 2rem;
+        }
+        h2 {
+            font-weight: 700;
+            font-size: 2.4rem;
+            color: white;
+            border-bottom: .3rem solid $red;
+            padding-bottom: .3rem;
+            display: inline-block;
+        }
+        p {
+            margin-top: 4rem;
+            margin-bottom: 4rem;
+            font-size: 1.8rem;
+            color: white;
+            line-height: 3rem;
+            padding-right: 3rem;
+            padding-left: 3rem;
+            @include mQ(31rem) {
+                margin-top: 2rem;
+                margin-bottom: 2rem;
+                padding-right: 0;
+                padding-left: 0;
+            }
+        }
+        label {
+            font-weight: 700;
+            font-size: 2.4rem;
+            color: white;
+            letter-spacing: .021rem;
+            display: block;
+            margin-bottom: .3rem;
+        }
+        input {
+            background: white;
+            border-radius: .4rem;
+            padding: .9rem 1.6rem;
+            width: 100%;
+            display: block;
+            font-size: 1.6rem;
+            letter-spacing: .028rem;
+            position: relative;
+            border: none;
+        }
+        .enterEmail {
+            width: 30rem;
+            margin: 0 auto;
+            @include mQ(31rem) {
+                width: 100%;
+            }
+        }
+        .actionBtn {
+            width: 31.6rem;
+            margin: 0 auto;
+            @include mQ(25rem) {
+                width: 100%;
+            }
+            .cancel,
+            .resetPassword {
+                display: inline-block;
+                width: calc(50% - 1.01rem);
+                margin-top: 6.2rem;
+                background-color: white;
+                border: .1rem solid transparent;
+                border-radius: .4rem;
+                font-weight: 700;
+                font-size: 1.4rem;
+                letter-spacing: .021rem;
+                &:hover {
+                    color: white;
+                }
+                @include mQ(25rem) {
+                    padding: .9rem .6rem;
+                    margin-top: 3rem;
+                }
+            }
+            .cancel {
+                color: $red;
+                border-color: $red;
+                margin-right: 1.6rem;
+                &:hover {
+                    background-color: $red;
+                    color: white;
+                }
+            }
+            .resetPassword {
+                color: #2B50ED;
+                border-color: #2B50ED;
+                &:hover {
+                    background-color: #2B50ED;
+                    color: white;
+                }
+            }
+        }
+    }
+    .changeBox {
+        background: $lGray;
+        box-shadow: 0 2.4rem 3rem 0 rgba(black, .13);
+        border-radius: 2.4rem;
+        width: 47.7rem;
+        padding: 4rem;
+        @include mQ(31rem) {
+            width: 100%;
+            border-radius: 0;
+            padding: 4rem 2rem;
+        }
+        h2 {
+            font-weight: 700;
+            font-size: 2.4rem;
+            color: white;
+            border-bottom: .3rem solid $red;
+            padding-bottom: .3rem;
+            margin-bottom: 6rem;
+            display: inline-block;
+            @include mQ(31rem) {
+                margin-bottom: 3rem;
+            }
+            @include mQ(25rem) {
+                margin-bottom: 2rem;
+            }
+        }
+        p {
+            font-size: 1.7rem;
+            color: white;
+            margin-bottom: 3.7rem;
+            padding-right: 3rem;
+            padding-left: 3rem;
+            @include mQ(31rem) {
+                padding-right: 1rem;
+                padding-left: 1rem;
+                margin-bottom: 2rem;
+            }
+            @include mQ(25rem) {
+                padding: 0;
+                font-size: 1.5rem;
+                margin-bottom: 1rem;
+            }
+        }
+        ul {
+            margin-bottom: 7rem;
+            padding-right: 3rem;
+            padding-left: 3rem;
+            @include mQ(31rem) {
+                padding-right: 1rem;
+                padding-left: 1rem;
+                margin-bottom: 1rem;
+            }
+            @include mQ(25rem) {
+                padding: 0;
+                margin-bottom: 2.5rem;
+            }
+            li {
+                font-size: 1.7rem;
+                color: white;
+                margin-bottom: 2.5rem;
+                line-height: 1;
+                list-style: inside;
+                padding-left: 2rem;
+                @include mQ(31rem) {
+                    padding-left: 1rem;
+                }
+                @include mQ(25rem) {
+                    font-size: 1.5rem;
+                    margin-bottom: 1rem;
+                    padding-left: 0;
+                }
+            }
+        }
+        label {
+            font-weight: 700;
+            font-size: 1.4rem;
+            color: white;
+            letter-spacing: .021rem;
+            display: block;
+            margin-bottom: .3rem;
+        }
+        input {
+            background: white;
+            border-radius: .4rem;
+            padding: .9rem 1.6rem;
+            width: 100%;
+            display: block;
+            font-size: 1.6rem;
+            letter-spacing: .028rem;
+            position: relative;
+            border: none;
+        }
+        .enterPassword {
+            width: 30rem;
+            margin: 0 auto 4rem;
+            @include mQ(31rem) {
+                width: 90%;
+                margin-bottom: 2rem;
+            }
+            @include mQ(25rem) {
+                width: 100%;
+            }
+        }
+        .actionBtn {
+            width: 31.6rem;
+            margin: 0 auto;
+            @include mQ(25rem) {
+                width: 100%;
+            }
+            .cancel,
+            .resetPassword {
+                display: inline-block;
+                width: calc(50% - 1.01rem);
+                margin-top: 1.3rem;
+                background-color: white;
+                border: .1rem solid transparent;
+                border-radius: .4rem;
+                font-weight: 700;
+                font-size: 1.4rem;
+                letter-spacing: .021rem;
+                @include mQ(25rem) {
+                    padding: .9rem .6rem;
+                    margin-top: -.2rem;
+                }
+                &:hover {
+                    color: white;
+                }
+            }
+            .cancel {
+                color: $red;
+                border-color: $red;
+                margin-right: 1.6rem;
+                &:hover {
+                    background-color: $red;
+                    color: white;
+                }
+            }
+            .resetPassword {
+                color: #2B50ED;
+                border-color: #2B50ED;
+                &:hover {
+                    background-color: #2B50ED;
+                    color: white;
+                }
+            }
+        }
+    }
+}

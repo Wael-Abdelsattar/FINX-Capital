@@ -1,0 +1,28 @@
+.globalWrapper {
+    direction: $bodyDir;
+    -ms-flex-direction: column;
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+    flex-direction: column;
+    min-height: 100%;
+    -webkit-transition: all .4s;
+    transition: all .4s;
+    position: relative;
+    overflow: hidden;
+}
+
+.GlobCount {
+    max-width: 117rem;
+    padding-right: 1.5rem;
+    padding-left: 1.5rem;
+    margin-left: auto;
+    margin-right: auto;
+    @include mQ(76.7rem) {
+        padding-right: 3rem;
+        padding-left: 3rem;
+    }
+    @include mQ(38rem) {
+        padding-right: 1.5rem;
+        padding-left: 1.5rem;
+    }
+}

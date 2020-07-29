@@ -1,0 +1,64 @@
+// General Body Setup
+$bodyDir: ltr;
+$bodyFont: 'Helvetica',
+sans-serif;
+$bodyBg: rgb(11, 14, 13);
+$bodyColor: rgba(black, .53);
+$defaultWeight: 500;
+// General Colors Variables
+$pColor: #F06174;
+$sColor: black;
+$blue: #0091FF;
+$lGray:rgb(28, 28, 28);
+$dColor:rgb(10, 13, 12);
+$red: #F04E31;
+$gTransition: all 0.4s ease-in-out;
+$sectionPadding: 3rem 0;
+$sectionPaddingM: 2rem 0;
+$sectionPaddingS: 8rem 0;
+$sectionPaddingXS: 5rem 0;
+$gBackground: #404046;
+@keyframes zoom {
+    // 0% {
+    //     opacity: 0;
+    //     transform: scale(1.5);
+    //     // transform: rotate(20deg);
+    //     transition: transform .5s ease;
+    // }
+    // 100% {
+    //     opacity: 1;
+    //     transform: scale(1);
+    //     // transform: rotate(0);
+    // }
+    0% {
+        transform-origin: 50% 50%;
+        transition: transform 1s, filter .5s all;
+        // transform: scale(3);
+        transform: scale(3);
+    }
+    100% {
+        transform: scale(1);
+    }
+    0% {}
+}
+
+@keyframes fadeIn {
+    0% {
+        opacity: 0;
+        // transform: scale(3);
+        transform: scale(1) translate(0, 150%);
+    }
+    100% {
+        opacity: 1;
+        transform: scale(1) translate(0, -16%);
+    }
+}
+
+@keyframes fadePanel {
+    0% {
+        opacity: 0;
+    }
+    100% {
+        opacity: 1;
+    }
+}

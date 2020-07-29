@@ -1,0 +1,322 @@
+<!DOCTYPE html>
+<html lang="ar">
+
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1, minimum-scale=1, maximum-scale=1">
+    <title>FINX Capital</title>
+    <meta data-react-helmet="true" name="description" content="FINX Capital description">
+    <meta name="keywords" content="">
+    <meta name="author" content="|">
+    <meta data-react-helmet="true" name="apple-mobile-web-app-capable" content="yes">
+    <meta data-react-helmet="true" name="apple-mobile-web-app-status-bar-style" content="#68CDF0">
+    <meta data-react-helmet="true" name="apple-mobile-web-app-title" content="finx.com">
+    <link data-react-helmet="true" rel="apple-touch-icon" sizes="57x57" href="assets/favicons/apple-icon-57x57.png">
+    <link data-react-helmet="true" rel="apple-touch-icon" sizes="60x60" href="assets/favicons/apple-icon-60x60.png">
+    <link data-react-helmet="true" rel="apple-touch-icon" sizes="72x72" href="assets/favicons/apple-icon-72x72.png">
+    <link data-react-helmet="true" rel="apple-touch-icon" sizes="76x76" href="assets/favicons/apple-icon-76x76.png">
+    <link data-react-helmet="true" rel="apple-touch-icon" sizes="114x114" href="assets/favicons/apple-icon-114x114.png">
+    <link data-react-helmet="true" rel="apple-touch-icon" sizes="120x120" href="assets/favicons/apple-icon-120x120.png">
+    <link data-react-helmet="true" rel="apple-touch-icon" sizes="144x144" href="assets/favicons/apple-icon-144x144.png">
+    <link data-react-helmet="true" rel="apple-touch-icon" sizes="152x152" href="assets/favicons/apple-icon-152x152.png">
+    <link data-react-helmet="true" rel="apple-touch-icon" sizes="180x180" href="assets/favicons/apple-icon-180x180.png">
+    <link data-react-helmet="true" rel="icon" type="image/png" sizes="192x192" href="assets/favicons/android-icon-192x192.png">
+    <link data-react-helmet="true" rel="icon" type="image/png" sizes="96x96" href="assets/favicons/favicon-96x96.png">
+    <link data-react-helmet="true" rel="icon" type="image/png" sizes="32x32" href="assets/favicons/favicon-32x32.png">
+    <link data-react-helmet="true" rel="icon" type="image/png" sizes="16x16" href="assets/favicons/favicon-16x16.png">
+    <link data-react-helmet="true" rel="shortcut icon" href="assets/favicons/favicon.ico">
+    <link rel="manifest" href="assets/favicons/manifest.json">
+    <meta name="msapplication-TileColor" content="#68CDF0">
+    <meta name="msapplication-TileImage" content="assets/favicons/ms-icon-144x144.png">
+    <meta name="theme-color" content="#68CDF0">
+    <meta data-react-helmet="true" property="og:site_name" content="finx.com">
+    <meta data-react-helmet="true" property="og:locale" content="en_US">
+    <meta data-react-helmet="true" property="og:type" content="website">
+    <meta data-react-helmet="true" property="og:title" content="finx">
+    <meta property="og:image:secure_url" content="screenshot.png">
+    <meta property="og:image:type" content="image/png">
+    <meta property="og:image:alt" content="finx">
+    <meta data-react-helmet="true" property="og:image" content="screenshot.png">
+    <meta data-react-helmet="true" property="og:description" content="FINX Capital description">
+    <meta data-react-helmet="true" property="og:url" content="https://www.finx.com">
+    <meta name="twitter:card" content="FINX Capital description">
+    <meta name="twitter:site" content="@finxCapital">
+    <meta name="twitter:creator" content="">
+    <meta property="og:title" content="finx">
+    <meta property="og:description" content="FINX Capital description">
+    <link rel="canonical" href="https://www.finx.com">
+
+    <link href="assets/styles/style.min.css" rel="stylesheet">
+
+    <!--[if lt IE 9]>
+        <script src="https://oss.maxcdn.com/libs/html5shiv/3.7.0/html5shiv.js"></script>
+        <script src="https://oss.maxcdn.com/libs/respond.js/1.4.2/respond.min.js"></script>
+    <![endif]-->
+</head>
+
+<body>
+    <div class="globalWrapper">
+
+        <!-- preloader -->
+        <div class="preloader">
+            <span></span>
+        </div>
+        <!-- [END] preloader -->
+
+        <!-- topHeader -->
+        <header class="topHeader">
+            <figure>
+                <a href="#">
+                    <img src="assets/images/logo.svg" alt="FINX Capital">
+                </a>
+            </figure>
+        </header>
+        <!-- [END] topHeader -->
+
+        <!-- dealStatusLender -->
+        <div class="dealStatusLender">
+
+            <!-- tHeader -->
+            <header class="tHeader">
+                <h1>Deal Status</h1>
+
+                <!-- topFilter -->
+                <div class="topFilter">
+                    <form action="">
+                        <div class="search">
+                            <input type="text" placeholder="Type something">
+                        </div>
+                        <div class="dateCalander">
+                            <div class="dateCalanderInput">
+                                <input type="text" class="datepicker" id="startDate" placeholder="Start Date">
+                                <!-- <input id="dpDateofBirth1" class="form-control" placeholder="From"> -->
+                            </div>
+                            <i class="mark"></i>
+                            <div class="dateCalanderInput">
+                                <input type="text" class="datepicker" id="toDate" placeholder="To Date">
+                            </div>
+                        </div>
+                        <input type="submit" class="submit" value="Create New Application">
+                    </form>
+                </div>
+                <!-- [END] topFilter -->
+            </header>
+            <!-- [END] tHeader -->
+
+            <!-- dataTable -->
+            <div class="dataTable">
+                <table>
+                    <tr>
+                        <th class="sortingArrow">Deal <i class="arrowButton"></i></th>
+                        <th>Message</th>
+                        <th class="sortingArrow">Customer’s Name <i class="arrowButton"></i></th>
+                        <th class="sortingArrow">Status <i class="arrowButton"></i></th>
+                        <th>In Que Time</th>
+                        <th class="sortingArrow">Dealership <i class="arrowButton"></i></th>
+                        <th class="sortingArrow">Sales Person <i class="arrowButton"></i></th>
+                        <th>Action</th>
+                    </tr>
+                    <tr>
+                        <td>121211</td>
+                        <td><span class="messageIcon"><a href="#"><i class="message"></i></a></span></td>
+                        <td>Martha Woods</td>
+                        <td><span class="status"><i class="inProgress"></i> In Progress</span></td>
+                        <td>15 minutes</td>
+                        <td>King Honda</td>
+                        <td>Blanche Robertson</td>
+                        <td>
+                            <a href="#"><i class="Camera"></i></a>
+                            <a href="#"><i class="call"></i></a>
+                        </td>
+                    </tr>
+                    <tr>
+                        <td>3546678</td>
+                        <td><span class="messageIcon"><a href="#"><i class="message"></i><span class="notificationCircle"></span></a>
+                            </span>
+                        </td>
+                        <td>Martha Woods</td>
+                        <td><span class="status"><i class="timer"></i> Submitted</span></td>
+                        <td>15 minutes</td>
+                        <td>King Honda</td>
+                        <td>Blanche Robertson</td>
+                        <td>
+                            <a href="#"><i class="Camera"></i></a>
+                            <a href="#"><i class="call"></i></a>
+                        </td>
+                    </tr>
+                    <tr>
+                        <td>56789</td>
+                        <td><span class="messageIcon"><a href="#"><i class="message"></i><span class="notificationCircle"></span></a>
+                            </span>
+                        </td>
+                        <td>Sallie Haynes</td>
+                        <td><span class="status"><i class="right"></i> Approved</span></td>
+                        <td>30 minutes</td>
+                        <td>Honda 1</td>
+                        <td>Addie Oliver</td>
+                        <td>
+                            <a href="#"><i class="Camera"></i></a>
+                            <a href="#"><i class="call"></i></a>
+                        </td>
+                    </tr>
+                    <tr>
+                        <td>123456</td>
+                        <td><span class="messageIcon"><a href="#"><i class="message"></i><span class="notificationCircle"></span></a>
+                            </span>
+                        </td>
+                        <td>Martha Woods</td>
+                        <td><span class="status"><i class="Funded"></i> Funded</span></td>
+                        <td>15 minutes</td>
+                        <td>King Honda</td>
+                        <td>Blanche Robertson</td>
+                        <td>
+                            <a href="#"><i class="Camera"></i></a>
+                            <a href="#"><i class="call"></i></a>
+                        </td>
+                    </tr>
+                    <tr>
+                        <td>121211</td>
+                        <td><span class="messageIcon"><a href="#"><i class="message"></i></a></span></td>
+                        <td>Martha Woods</td>
+                        <td><span class="status"><i class="close"></i> Declined</span></td>
+                        <td>15 minutes</td>
+                        <td>King Honda</td>
+                        <td>Blanche Robertson</td>
+                        <td>
+                            <a href="#"><i class="Camera"></i></a>
+                            <a href="#"><i class="call"></i></a>
+                        </td>
+                    </tr>
+                    <tr>
+                        <td>9876567</td>
+                        <td><span class="messageIcon"><a href="#"><i class="message"></i><span class="notificationCircle"></span></a>
+                            </span>
+                        </td>
+                        <td>Martha Woods</td>
+                        <td><span class="status"><i class="Withdrawn"></i> Withdrawn</span></td>
+                        <td>15 minutes</td>
+                        <td>King Honda</td>
+                        <td>Blanche Robertson</td>
+                        <td>
+                            <a href="#"><i class="Camera"></i></a>
+                            <a href="#"><i class="call"></i></a>
+                        </td>
+                    </tr>
+                    <tr>
+                        <td>435656</td>
+                        <td><span class="messageIcon"><a href="#"><i class="message"></i></a></span></td>
+                        <td>Martha Woods</td>
+                        <td><span class="status"><i class="inProgress"></i> In Progress</span></td>
+                        <td>15 minutes</td>
+                        <td>King Honda</td>
+                        <td>Blanche Robertson</td>
+                        <td>
+                            <a href="#"><i class="Camera"></i></a>
+                            <a href="#"><i class="call"></i></a>
+                        </td>
+                    </tr>
+                    <tr>
+                        <td>3456674</td>
+                        <td><span class="messageIcon"><a href="#"><i class="message"></i><span class="notificationCircle"></span></a>
+                            </span>
+                        </td>
+                        <td>Martha Woods</td>
+                        <td><span class="status"><i class="timer"></i> Submitted</span></td>
+                        <td>15 minutes</td>
+                        <td>King Honda</td>
+                        <td>Blanche Robertson</td>
+                        <td>
+                            <a href="#"><i class="Camera"></i></a>
+                            <a href="#"><i class="call"></i></a>
+                        </td>
+                    </tr>
+                    <tr>
+                        <td>35446776</td>
+                        <td><span class="messageIcon"><a href="#"><i class="message"></i><span class="notificationCircle"></span></a>
+                            </span>
+                        </td>
+                        <td>Sallie Haynes</td>
+                        <td><span class="status"><i class="right"></i> Approved</span></td>
+                        <td>30 minutes</td>
+                        <td>Honda 1</td>
+                        <td>Addie Oliver</td>
+                        <td>
+                            <a href="#"><i class="Camera"></i></a>
+                            <a href="#"><i class="call"></i></a>
+                        </td>
+                    </tr>
+                    <tr>
+                        <td>3456456</td>
+                        <td><span class="messageIcon"><a href="#"><i class="message"></i><span class="notificationCircle"></span></a>
+                            </span>
+                        </td>
+                        <td>Martha Woods</td>
+                        <td><span class="status"><i class="Funded"></i> Funded</span></td>
+                        <td>15 minutes</td>
+                        <td>King Honda</td>
+                        <td>Blanche Robertson</td>
+                        <td>
+                            <a href="#"><i class="Camera"></i></a>
+                            <a href="#"><i class="call"></i></a>
+                        </td>
+                    </tr>
+                    <tr>
+                        <td>53453453</td>
+                        <td><span class="messageIcon"><a href="#"><i class="message"></i></a></span></td>
+                        <td>Martha Woods</td>
+                        <td><span class="status"><i class="close"></i> Declined</span></td>
+                        <td>15 minutes</td>
+                        <td>King Honda</td>
+                        <td>Blanche Robertson</td>
+                        <td>
+                            <a href="#"><i class="Camera"></i></a>
+                            <a href="#"><i class="call"></i></a>
+                        </td>
+                    </tr>
+                    <tr>
+                        <td>34534662</td>
+                        <td><span class="messageIcon"><a href="#"><i class="message"></i><span class="notificationCircle"></span></a>
+                            </span>
+                        </td>
+                        <td>Martha Woods</td>
+                        <td><span class="status"><i class="Withdrawn"></i> Withdrawn</span></td>
+                        <td>15 minutes</td>
+                        <td>King Honda</td>
+                        <td>Blanche Robertson</td>
+                        <td>
+                            <a href="#"><i class="Camera"></i></a>
+                            <a href="#"><i class="call"></i></a>
+                        </td>
+                    </tr>
+
+                </table>
+                <ul class="pagination">
+                    <li><a href="#"><i class="arrowLeft"></i></a></li>
+                    <li><a href="#" class="active">1</a></li>
+                    <li><a href="#">2</a></li>
+                    <li><a href="#">3</a></li>
+                    <li><a href="#">4</a></li>
+                    <li><a href="#">5</a></li>
+                    <li class="morePages">…</li>
+                    <li><a href="#">20</a></li>
+                    <li><a href="#"><i class="arrowLeft"></i></a></li>
+                </ul>
+            </div>
+            <!-- [END] dataTable -->
+
+
+        </div>
+        <!-- [END] dealStatusLender -->
+
+    </div>
+    <!-- [END] globalWrapper -->
+
+    <!-- javascript -->
+    <script src="assets/js/jquery.min.js"></script>
+    <script src="https://code.jquery.com/ui/1.12.1/jquery-ui.js"></script>
+    <script src="assets/js/functions.js"></script>
+
+</body>
+
+</html>

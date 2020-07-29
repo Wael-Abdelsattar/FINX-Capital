@@ -1,0 +1,328 @@
+html {
+    font-size: 10px;
+}
+
+html,
+body {
+    height: 100%;
+}
+
+* {
+    box-sizing: border-box;
+}
+
+body {
+    @include clearFix;
+    height: 100%;
+    font-size: 1.5rem;
+    font-weight: 300;
+    font-family: $bodyFont;
+    color: $lGray;
+    line-height: 1.4;
+    text-rendering: optimizeLegibility !important;
+    -webkit-font-smoothing: antialiased !important;
+    -webkit-overflow-scrolling: touch;
+    overflow: hidden;
+    overflow-y: auto !important;
+    position: relative;
+    direction: $bodyDir;
+    background-color: $bodyBg;
+    a,
+    button,
+    input {
+        text-decoration: none;
+        transition: all 0.4s ease-in-out;
+        font-family: $bodyFont;
+        font: 400 1.4rem $bodyFont;
+        border: none;
+        &:focus {
+            outline-offset: 0;
+        }
+        &[type="text" i] {
+            padding: 0;
+        }
+        &[type="submit"] {
+            cursor: pointer;
+        }
+    }
+    // Scrollbar styles
+    & *::-webkit-scrollbar {
+        width: .6rem;
+        height: .6rem;
+        transition: 0.6s background;
+    }
+    & *::-webkit-scrollbar-thumb {
+        background: #ced4da;
+    }
+    & *:hover::-webkit-scrollbar-thumb {
+        background: #adb5bd;
+    }
+}
+
+:focus {
+    outline: -webkit-focus-ring-color auto 0;
+}
+
+a {
+    color: $blue;
+    transition: $gTransition;
+    &:hover {
+        color: $sColor;
+    }
+}
+
+i {
+    transition: $gTransition !important;
+}
+
+b {
+    font-weight: 500 !important;
+    a {
+        color: $pColor;
+        text-decoration: underline;
+        &:hover {
+            color: $pColor;
+        }
+    }
+}
+
+hr {
+    border: 0;
+    border-top: .1rem solid;
+    margin: 2rem 0;
+}
+
+p {
+    margin: 0 0 1rem;
+    line-height: 1.7;
+    font-weight: 300;
+    font-size: 1.7rem;
+    &:last-child {
+        margin-bottom: 0;
+    }
+}
+
+::selection {
+    background: $pColor;
+    color: white;
+}
+
+::placeholder {
+    color: rgba(black, .4);
+}
+
+
+/* Heading title */
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+    margin: 0;
+    padding: 0;
+    -webkit-margin-before: 0;
+    -webkit-margin-after: 0;
+    font-weight: $defaultWeight;
+    color: $pColor;
+}
+
+h1 {
+    font-size: 4.5rem;
+    @include mQ(76.7rem) {
+        font-size: 3rem;
+    }
+    @include mQ(49rem) {
+        font-size: 2.5rem;
+    }
+}
+
+h2 {
+    font-size: 4rem;
+    @include mQ(38rem) {
+        font-size: 2.8rem;
+    }
+}
+
+h3 {
+    font-size: 3rem
+}
+
+h4 {
+    font-size: 2.2rem;
+}
+
+// btn
+.btn {
+    @include flexCenter();
+    transition: $gTransition;
+    background: white;
+    color: black;
+    border: 0;
+    -webkit-appearance: none;
+    cursor: pointer;
+    outline: 0;
+    padding: 1rem 3rem;
+    font-size: 1.5rem;
+    font-weight: 700;
+    box-shadow: .5rem .5rem 2rem 0 rgba(black, .2);
+    border-radius: 50rem;
+    border: .1rem solid transparent;
+    text-transform: uppercase;
+    &:hover {
+        box-shadow: none;
+    }
+    @include mQ(76.7rem) {
+        padding: .8rem 1rem;
+        font-size: 1.4rem;
+    }
+}
+
+.btnDefault {
+    box-shadow: .5rem .5rem 2rem 0 rgba(198, 44, 99, 0.36);
+    color: $pColor;
+    &:hover {
+        background-color: $pColor;
+        color: white;
+        box-shadow: .5rem .5rem 2rem 0 rgba(198, 44, 99, 0.36);
+    }
+}
+
+figure {
+    img {
+        display: block;
+    }
+}
+
+i {
+    font-family: 'finxIcon' !important;
+    font-style: normal;
+    font-weight: normal;
+    font-variant: normal;
+    text-transform: none;
+    transition: auto;
+    line-height: 1;
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+}
+
+.sTitle {
+    margin-bottom: 3rem;
+    font-weight: 400;
+    font-size: 2.5rem;
+    color: $lGray;
+    text-align: center;
+    @include mQ(32rem) {
+        margin-bottom: 1.5rem;
+    }
+}
+
+.moreLink {
+    font-size: 1.3rem;
+    color: $lGray;
+    text-align: center;
+    margin-top: 2rem;
+    display: block;
+    text-decoration: underline;
+    text-transform: uppercase;
+    &:hover {
+        color: $pColor;
+    }
+}
+
+.slick-arrow {
+    position: absolute;
+    border: none;
+    background: none;
+    color: $dColor;
+    z-index: 1;
+    cursor: pointer;
+    &:hover {
+        opacity: .6;
+    }
+}
+
+.arrow-prev {
+    left: -4rem;
+    @include mQ(76.7rem) {
+        left: -3rem;
+    }
+    @include mQ(32rem) {
+        left: -2rem;
+        display: none !important;
+    }
+}
+
+.arrow-next {
+    right: -4rem;
+    @include mQ(76.7rem) {
+        right: -3rem;
+    }
+    @include mQ(32rem) {
+        right: -1rem;
+        display: none !important;
+    }
+}
+
+.alert {
+    background-color: white;
+    border-radius: .4rem;
+    padding: 1rem 1.7rem;
+    font-weight: 700;
+    font-size: 1.5rem;
+    display: block;
+    margin-bottom: 1.6rem;
+    @include mQ(25rem) {
+        font-size: 1.4rem;
+    }
+}
+
+.alertRed {
+    background-color: #FFDCE0;
+    color: #E02020;
+}
+
+.submit {
+    background: white;
+    border: .1rem solid $red;
+    border-radius: .4rem;
+    font-weight: 700;
+    font-size: 1.4rem;
+    color: $red;
+    letter-spacing: .021rem;
+    &:hover {
+        background-color: $red;
+        color: white;
+    }
+}
+
+input {
+    &[type="checkbox"] {
+        height: 1.7rem;
+        width: 1.7rem;
+        border: .2rem solid #2B50ED;
+        -webkit-appearance: none;
+        -webkit-border-radius: .2rem;
+        border-radius: .2rem;
+        border-color: #2B50ED;
+        outline: none;
+        position: relative;
+        &:checked {
+            border-color: #2B50ED !important;
+            background-color: #2B50ED !important;
+            &::before {
+                content: '';
+                display: block;
+                width: .4rem;
+                height: .8rem;
+                border: solid #fff;
+                border-width: 0 .2rem .2rem 0;
+                -webkit-transform: rotate(45deg);
+                transform: rotate(45deg);
+                margin-left: .4rem;
+                margin-top: .1rem;
+            }
+        }
+    }
+}

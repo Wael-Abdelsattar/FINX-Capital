@@ -1,0 +1,104 @@
+@font-face {
+    font-family: 'Helvetica';
+    src: url('../fonts/Helvetica.woff2') format('woff2'), url('../fonts/Helvetica.woff') format('woff');
+    font-weight: 400;
+    font-style: normal;
+    font-display: swap;
+}
+
+@font-face {
+    font-family: 'Helvetica';
+    src: url('../fonts/Helvetica-Bold.woff2') format('woff2'), url('../fonts/Helvetica-Bold.woff') format('woff');
+    font-weight: 700;
+    font-style: normal;
+    font-display: swap;
+}
+
+@font-face {
+    font-family: 'finxIcon';
+    src: url('../fonts/finxIcon.eot?pzprnt');
+    src: url('../fonts/finxIcon.eot?pzprnt#iefix') format('embedded-opentype'), url('../fonts/finxIcon.ttf?pzprnt') format('truetype'), url('../fonts/finxIcon.woff?pzprnt') format('woff'), url('../fonts/finxIcon.svg?pzprnt#finxIcon') format('svg');
+    font-weight: normal;
+    font-style: normal;
+    font-display: block;
+}
+
+.arrowMenu:before {
+    content: "\e913";
+}
+
+.gridBlue:before {
+    content: "\e911";
+}
+
+.Lock:before {
+    content: "\e912";
+}
+
+.arrowButton:before {
+    content: "\e903";
+}
+
+.arrowLeft:before {
+    content: "\e904";
+}
+
+.calander:before {
+    content: "\e905";
+}
+
+.call:before {
+    content: "\e906";
+}
+
+.Camera:before {
+    content: "\e907";
+}
+
+.close:before {
+    content: "\e908";
+}
+
+.Funded:before {
+    content: "\e909";
+}
+
+.inProgress:before {
+    content: "\e90a";
+}
+
+.mark:before {
+    content: "\e90b";
+}
+
+.message:before {
+    content: "\e90c";
+}
+
+.right:before {
+    content: "\e90d";
+}
+
+.search:before {
+    content: "\e90e";
+}
+
+.timer:before {
+    content: "\e90f";
+}
+
+.Withdrawn:before {
+    content: "\e910";
+}
+
+.eyeIcon:before {
+    content: "\e900";
+}
+
+.passwordIcon:before {
+    content: "\e901";
+}
+
+.userIcon:before {
+    content: "\e902";
+}
